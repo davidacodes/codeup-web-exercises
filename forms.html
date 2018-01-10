@@ -2,19 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register With Us</title>
 </head>
 <body>
-
-    <form action="" method="" id="">
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username" placeholder="Input your username here.">
-
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" placeholder="Input your password here.">
-
-        <button type="submit">Login</button>
+    <form action="https://hookb.in/E7Rer148" method="GET" id="this is the id">
+        <fieldset>
+            <div>
+                <h4>Login</h4>
+                <label for="email">Username:</label>
+                <input type="text" name="username" id="email" placeholder="Input email here.">
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" placeholder="Input password here.">
+            </div>
+            <div>
+                <h4>Please tell us about yourself.</h4>
+                <textarea name="bio"></textarea>
+            </div>
+            <div>
+                <h4>How you hear about us?</h4>
+                <input type="radio" name="billboard" value="billboard">Billboard<br>
+                <input type="radio" name="radio" value="radio">Radio Advertisement<br>
+                <input type="radio" name="internet" value="internet">Internet<br>
+                <input type="radio" name="other" value="other">Other<br>
+            </div>
+            <div>
+                <h4>What browser are you using?</h4>
+                <select name="browser" id="browser">
+                    <option value="firefox">Firefox</option>
+                    <option value="edge">Edge</option>
+                    <option value="chrome">Chrome</option>
+                    <option value="string">Two cans and string</option>
+                    <option value="ham">Ham Radio</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit">Login</button>
+            </div>
+        </fieldset>
     </form>
-
 </body>
 </html>
+
