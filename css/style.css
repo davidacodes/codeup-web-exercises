@@ -1,0 +1,76 @@
+#fancy-header {
+    background-color: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+    color: #B098A;
+    text-align: center
+
+}
+
+h4 {
+    color: #B098A;
+    text-decoration: underline;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-shadow: #696969 1px 0 10px;
+    background: url("../img/background.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+table {
+    background-color: white;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 50px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+a:link {
+    text-decoration: none;
+    text-shadow: yellow;
+}
+
+a:visited {
+    text-decoration: none;
+    text-shadow: cyan;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-shadow: lightgreen;
+}
+
+a:active {
+    text-decoration: underline;
+    text-shadow: hotpink;
+}
+
+img {
+    border-radius: 50%;
+}
+
+fieldset {
+    background-color: white;
+    border:2px solid black;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+}
+

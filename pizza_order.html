@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza Bust</title>
+</head>
+<body>
+<fieldset>
+    <legend><h4>Order Pizza</h4></legend>
+    <form action="POST" action="">
+
+        <strong> Like what you want on it? </strong>
+        <div>
+            <input name="meat" value="true" type="checkbox">All Them Meats
+        </div>
+
+        <div>
+            <input name="cheese" value="true" type="checkbox">Cheese from 3 different animals
+        </div>
+
+        <div>
+            <input name="veggie" value="true" type="checkbox">Veggies rised on Death Metal
+        </div>
+
+        <div>
+            <input name="pizza" value="true" type="checkbox">Another Pizza
+        </div>
+        <br>
+        <div>
+            What kind of crust?
+            <select name="crust_preference">
+                <option value="stuffIt">Stuff It</option>
+                <option value="meat">Made from Meat</option>
+                <option value="glutenfree">Tasteless Glutenfree</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <textarea name="comment" placeholder="Please let us know if you need anything else here." rows="5" cols="30" ></textarea>
+        </div>
+        <br>
+        <div>
+            Email:
+            <input type="text" name="email" placeholder="Enter Email" required>
+        </div>
+        <br>
+        <div>
+            Would you like to upgrades? <br>
+            <input type="radio" name="upgrade_butter" value="butter">Liquid Butter Bucket<br>
+            <input type="radio" name="upgrade_sugar" value="sugar">Sugar Soda Pail<br>
+            <input type="radio" name="upgrade_pepper" value="pepper">Death Pain Pepper Chunks<br>
+            <input type="radio" name="upgrade_cheeseBread" value="cheeseBread">Cheese Bread the size a child's arm<br>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit">
+            <input type="reset">
+        </div>
+    </form>
+</fieldset>
+
+
+
+<fieldset>
+    <legend><h4>Please Login</h4></legend>
+    <form method="POST" action="https://hookb.in/E7Rer148">
+        <div>
+            Username:
+            <input type="text" name="username" placeholder="Enter Username" required>
+        </div>
+
+        <div>
+            Password:
+            <input type="password" name="password" placeholder="Enter Password" required>
+        </div>
+        <br>
+        <div>
+            <input name="stay_login" value="true" type="checkbox" checked>Keep me logged in so I can be tracked.
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit">
+            <input type="reset">
+        </div>
+
+        <input type="hidden" name="user_id" value="Pizza_Lover">
+    </form>
+</body>
+</html>
+
+
+
+
+<!--Must include at least one of the following input types:-->
+<!--Multiple checkbox-->
+<!--Dropdown select-->
+<!--Hidden-->
+<!--Text-->
+<!--Email-->
+<!--Password-->
+<!--Radio-->
