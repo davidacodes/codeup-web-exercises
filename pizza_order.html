@@ -5,10 +5,47 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pizza Bust</title>
+    <title>Pizza Bucket</title>
+
+    <style>
+
+        body {
+            background: url("img/pizza.jpeg");
+
+        }
+
+        #login {
+            border: 1px solid black;
+            width: 300px;
+            height: 200px;
+            padding: 10px;
+            background-color: red;
+            color: white;
+            border-radius: 8px;
+            margin-left: 100px;
+            float: left;
+        }
+
+        #order-page {
+            border: 1px solid black;
+            width: 500px;
+            height: 500px;
+            background-color: lightcoral;
+            border-radius: 8px;
+            float: right;
+            padding-left: 5px;
+        }
+    </style>
+
 </head>
 <body>
-<fieldset>
+    <div id="title">
+
+
+
+    </div>
+
+<div id="order-page">
     <legend><h4>Order Pizza</h4></legend>
     <form action="POST" action="">
 
@@ -59,13 +96,14 @@
             <input type="submit" value="Submit">
             <input type="reset">
         </div>
+    </div>
     </form>
 </fieldset>
 
 
 
-<fieldset>
-    <legend><h4>Please Login</h4></legend>
+<div id="login" class="pizza-page">
+    <h4>Please Login</h4>
     <form method="POST" action="https://hookb.in/E7Rer148">
         <div>
             Username:
@@ -88,6 +126,7 @@
 
         <input type="hidden" name="user_id" value="Pizza_Lover">
     </form>
+</div>
 </body>
 </html>
 

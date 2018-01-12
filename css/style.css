@@ -16,8 +16,8 @@ h4 {
 }
 
 body {
-    font-family: 'Roboto Condensed', sans-serif;
-    text-shadow: #696969 1px 0 10px;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-family: 'Macondo', cursive;
     background: url("../img/background.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -25,7 +25,12 @@ body {
 }
 
 ul {
-    list-style-type: circle;
+    list-style: none;
+}
+
+ul > li:before {
+    content: '💩';
+    padding-right: 8px;
 }
 
 table {
@@ -74,3 +79,9 @@ fieldset {
     border-radius:8px;
 }
 
+.centered {
+    display: block;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
