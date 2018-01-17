@@ -1,0 +1,109 @@
+html,
+body {
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+}
+h1 {
+    text-align: center;
+}
+
+
+.alert-info {
+    background-color: #add8e6;
+    border: 2px solid #d3d3d3;
+    padding: 1em;
+    text-align: center;
+}
+.nav-links {
+    padding-left: 0;
+}
+
+.nav-links li {
+    background-color: #d3d3d3;
+    padding: 1em;
+    text-align: center;
+    list-style: none;
+}
+.sub-section {
+    font-style: italic;
+}
+img {
+    height: 224px;
+    width: 339px;
+    display: block;
+    margin: 0 auto;
+}
+.fa {
+    float: right;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .alert-info {
+        display: none;
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    /*https://stackoverflow.com/questions/20920265/horizontal-menu-how-to-float-right-but-keep-the-menu-items-in-the-correct-order*/
+
+    .nav-links {
+        text-align: right;
+    }
+
+    .nav-links li{
+        display: inline-block;
+        background-color: transparent;
+        padding: .2em;
+        line-height: 2em
+
+    }
+    img {
+        height: 385px;
+        width: 890px;
+        display: block;
+        margin: 0 auto;
+    }
+    .main {
+        float: left;
+        width: 60%;
+    }
+    .fa {
+        padding: 20px;
+        font-size: 2.25em;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    /* Facebook */
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }
+    /* Twitter */
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }
+    .fa-google {
+        background: #dd4b39;
+        color: white;
+    }
+
+    .fa-linkedin {
+        background: #007bb5;
+        color: white;
+    }
+
+    .fa-youtube {
+        background: #bb0000;
+        color: white;
+    }
+    /*https://www.w3schools.com/howto/howto_css_social_media_buttons.asp*/
+}
