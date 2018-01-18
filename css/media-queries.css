@@ -43,12 +43,14 @@ img {
 
 @media screen and (min-width: 768px) {
 
-    .alert-info {
+    .hidden-on-desktop {
         display: none;
     }
 
     h1 {
         text-align: left;
+
+
     }
 
     /*https://stackoverflow.com/questions/20920265/horizontal-menu-how-to-float-right-but-keep-the-menu-items-in-the-correct-order*/
@@ -72,7 +74,7 @@ img {
     }
     .main {
         float: left;
-        width: 60%;
+
     }
     .fa {
         padding: 20px;
