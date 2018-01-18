@@ -10,6 +10,23 @@ h1 {
     text-align: center;
 }
 
+.row {
+    width: 100%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.column {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin-bottom: 5px;
+}
 
 .alert-info {
     background-color: #add8e6;
@@ -19,13 +36,23 @@ h1 {
 }
 .nav-links {
     padding-left: 0;
-}
 
+}
 .nav-links li {
     background-color: #d3d3d3;
     padding: 1em;
     text-align: center;
-    list-style: none;
+    margin-bottom: .5em;
+    list-style-type: none;
+}
+
+
+.link{
+    background-color: #d3d3d3;
+    padding: 1em;
+    text-align: center;
+    list-style-type: none;
+
 }
 .sub-section {
     font-style: italic;
@@ -46,25 +73,35 @@ img {
     .hidden-on-desktop {
         display: none;
     }
-
+    .title {
+        width: 50%;
+        clear: both;
+    }
     h1 {
         text-align: left;
-
-
     }
 
     /*https://stackoverflow.com/questions/20920265/horizontal-menu-how-to-float-right-but-keep-the-menu-items-in-the-correct-order*/
 
+
+
     .nav-links {
+        float: right;
         text-align: right;
+
     }
 
-    .nav-links li{
+    .link  {
         display: inline-block;
         background-color: transparent;
         padding: .2em;
-        line-height: 2em
-
+        line-height: 4em;
+        width: 50%;
+    }
+    .nav-links li {
+        float: right;
+        padding: 10px;
+        background-color: transparent;
     }
     img {
         height: 385px;
@@ -74,7 +111,12 @@ img {
     }
     .main {
         float: left;
+        width: 66%;
+    }
 
+    .sub-section {
+        float: right;
+        width: 33%;
     }
     .fa {
         padding: 20px;
