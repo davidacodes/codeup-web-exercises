@@ -28,10 +28,14 @@ console.log(helloMessage);
  */
 var myName = "David";
 sayHello(myName);
+
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 var random = Math.floor((Math.random() * 3) + 1);
 
+function randomnumberUnder(number) {
+    return Math.celi(Math.random() * number);
+}
 /**
  * TODO:
  * Create a function called 'isTwo' that takes a number as a parameter.
@@ -52,6 +56,7 @@ var random = Math.floor((Math.random() * 3) + 1);
 function isTwo(number) {
     return number == 2;
 }
+console.log("Is " + random + " equal to the number two: " + isTwo(random));
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
