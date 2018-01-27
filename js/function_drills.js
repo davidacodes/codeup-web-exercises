@@ -77,20 +77,40 @@
         }
     }
     /** Make a function named isConsonant(letter) **/
+    function isConsonant(letter) {
+        var vowels = ["a", "e", "i", "o", "u", "y"];
+        return (vowels.indexOf(letter.toLowerCase()) == -1);
+    }
+
     /** Make a function named hasConsonants(string) **/
     /** Make a function named isCapital(letter) **/
     function isCapital(letter) {
-
+        return letter == letter.toUpperCase();
     }
+
     /** Make a function named hasCapitalLetters(string) that returns if a string has any capitals. **/
+    function hasCapitalLetter(string) {
+        return string != string.toLowerCase();
+    }
+
     /** Make a function named isLowerCase(letter) **/
+
     /** Make a function named hasLowerCase(string) that returns if a string has any lower cased **/
     /** Make a function named isSpace(letter) that returns if a character is a space character **/
     /** Make a function named hasSpaces(string) that returns if a string has any space characters
      /** Make a function named isZero(number) **/
     /** Make a function named increment(number) that returns a number plus one **/
+    function increment(number) {
+        return ++number;
+    }
+
     /** Make a function named decrement(number) that returns a number minus one **/
+    function decrement(number) {
+        return --number;
+    }
+
     /** Make a function named isFive(input) **/
+
     /** Make a function named addFive(input) that adds five to some input. **/
     function addFive(input) {
         return Number(input) + 5;
@@ -103,6 +123,10 @@
 
     /** Make a function named isThree(input) **/
     /** Make a function named isMultipleOfThree(input) **/
+    function isMultipleOfThree(input) {
+        return 0 == (input % 3);
+    }
+
     /** Make a function named isMultipleOfThreeAndFive(input) **/
     /** Write a function named lowerCase(string) **/
     function lowerCase(string) {
@@ -111,10 +135,23 @@
 
     /** Write a function named capitalizeEachWord(string) uses capitalize to return a string where each new word (separated by a space) is capitalized. **/
     /** Write a function named add(a, b) that returns the sum of a and b **/
+    function add(a, b) {
+        return a + b;
+    }
+
     /** Write a function named subtract(a, b) that returns a minus b **/
     /** Write a function named multiply(a, b) that returns the product of a times b **/
     /** Write a function named divide(a, b) that returns a divided by b **/
     /** Write a function named remainder(a, b) that returns the remainder after dividing a by b **/
+    function remainder(a, b) {
+        return a % b;
+    }
     /** Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs. **/
     /** Make a function named isNumeric(input) returns true/false if the input is a number or numeric string **/
+    function isNumeric(input) {
+        return input == parseInt(input);
+    }
     /** Make a function named trim(string) that removes empty spaces before and after the input.  **/
+    function trim(string) {
+        return string.trim();
+    }
