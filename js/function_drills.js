@@ -76,6 +76,7 @@
             return console.log("No vowels were found.")
         }
     }
+
     /** Make a function named isConsonant(letter) **/
     function isConsonant(letter) {
         var vowels = ["a", "e", "i", "o", "u", "y"];
@@ -94,6 +95,9 @@
     }
 
     /** Make a function named isLowerCase(letter) **/
+    function isLowerCase(letter) {
+        return letter == letter.toLowerCase();
+    }
 
     /** Make a function named hasLowerCase(string) that returns if a string has any lower cased **/
     /** Make a function named isSpace(letter) that returns if a character is a space character **/
@@ -110,6 +114,9 @@
     }
 
     /** Make a function named isFive(input) **/
+    function isFive(input) {
+        return  parseInt(input) == 5;
+    }
 
     /** Make a function named addFive(input) that adds five to some input. **/
     function addFive(input) {
@@ -122,12 +129,20 @@
     }
 
     /** Make a function named isThree(input) **/
+    function isThree(input) {
+        return 3 == parseInt(input);
+    }
+
     /** Make a function named isMultipleOfThree(input) **/
     function isMultipleOfThree(input) {
         return 0 == (input % 3);
     }
 
     /** Make a function named isMultipleOfThreeAndFive(input) **/
+    function isMutipleOfThreeAndFive(input) {
+        return (0 == (input % 3)) && (0 == (input % 5));
+    }
+
     /** Write a function named lowerCase(string) **/
     function lowerCase(string) {
         return string.toLowerCase()
@@ -140,13 +155,26 @@
     }
 
     /** Write a function named subtract(a, b) that returns a minus b **/
+    function subtract(a, b) {
+        return a - b;
+    }
     /** Write a function named multiply(a, b) that returns the product of a times b **/
+    function multiply(a, b) {
+        return a * b;
+    }
     /** Write a function named divide(a, b) that returns a divided by b **/
+    function divide(a, b) {
+        return a / b;
+    }
     /** Write a function named remainder(a, b) that returns the remainder after dividing a by b **/
     function remainder(a, b) {
         return a % b;
     }
     /** Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs. **/
+    function isBlank(input) {
+        return input ==
+    }
+
     /** Make a function named isNumeric(input) returns true/false if the input is a number or numeric string **/
     function isNumeric(input) {
         return input == parseInt(input);
