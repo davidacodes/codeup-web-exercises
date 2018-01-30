@@ -13,6 +13,13 @@ Example: dayOfTheWeekStartsWithT("Tuesday")     => returns true
 Example: dayOfTheWeekStartsWithT("Tommy")     => returns false
  **/
 
+// function dayOfTheWeekStartsWithT(day) {
+//     day = day.toLowerCase();
+//     return (day === "tuesday" || day === "thursday");
+// }
+
+
+
 
 function dayOfTheWeekStartsWithT(day) {
     return (day.toLowerCase() === "tuesday" || day.toLowerCase() === "thursday");

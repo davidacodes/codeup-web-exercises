@@ -69,18 +69,20 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 var rainbow;
 
 function analyzeColor(rainbow) {
-    if (rainbow == 'red') {
+    if (rainbow === 'red') {
         return console.log('Bloody Mary\'s in the morning.');
-    } else if (rainbow == 'orange') {
+    } else if (rainbow === 'orange') {
         return console.log('All you can drink mimosas?');
-    } else if (rainbow == 'green') {
+    } else if (rainbow === 'green') {
         return console.log('Irish Car Bomb');
-    } else if (rainbow == 'blue') {
+    } else if (rainbow === 'blue') {
         return console.log('Route 44 Ocean Water but with a lot of vodka');
-    } else if (rainbow == 'indigo') {
+    } else if (rainbow === 'indigo') {
         return console.log('is indigo like a blue or a purple? do we really need it?');
+    } else if (rainbow === 'violet') {
+        return console.log("Violet, Purple Drank!");
     } else {
-        return console.log("Violet, Purple Drank!")
+        return console.log('That is not a color from the Rainbow!');
     }
 }
 analyzeColor(randomColor);
@@ -113,10 +115,10 @@ switch (randomColor) {
         console.log('is indigo like a blue or a purple? do we really need it?');
         break;
     case "violet"
-        console.log('Violet, Purple Drank')
+        console.log('Violet, Purple Drank');
         break;
     default;
-        console.log('That is not a color from the Rainbow!')
+        console.log('That is not a color from the Rainbow!');
 }
 
 /**
