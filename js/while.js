@@ -1,4 +1,6 @@
 
+'use strict';
+
 /**
  * First Exercise
  * **/
@@ -9,6 +11,8 @@
 //     console.log(byTwo);
 //     byTwo = byTwo * 2;
 // }
+
+
 
 /**
  *

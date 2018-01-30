@@ -1,3 +1,6 @@
+
+'use strict';
+
 /**
 Break and Continue
 
@@ -10,11 +13,26 @@ Break and Continue
     numbers between 1 and 50, except for the number the user entered.
  **/
 
+// do {
+//     var oddNumber = prompt("Could you please provided an odd number between 1 and 50.");
+// } while (oddNumber % 2 === 0 );
+//
+//
+//
+// for (var i = 1; i < 50; i++) {
+//
+//     if (i % 2 === 0) {
+//         //skip the even numbers.
+//         continue;
+//     }
+//
+//     if (i === parseInt(oddNumber)) {
+//         console.log("Yikes Skippng number: " + oddNumber);
+//     } else {
+//         console.log("Here is an odd number: " + i);
+//     }
+// }
 
-oddNumber = prompt("Could you please provided an odd number between 1 and 50.")
-
-
-oddNumber % 2 !== 0
 
 
 
