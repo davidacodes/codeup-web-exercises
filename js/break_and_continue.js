@@ -12,12 +12,12 @@ Break and Continue
  3. Use a loop and the continue statement to output all the odd
     numbers between 1 and 50, except for the number the user entered.
  **/
-
+//
 // do {
 //     var oddNumber = prompt("Could you please provided an odd number between 1 and 50.");
-// } while (oddNumber % 2 === 0 );
+// } while (input > 50 || input < 1 || isNaN(parseFloat(input)));
 //
-//
+
 //
 // for (var i = 1; i < 50; i++) {
 //
@@ -32,6 +32,8 @@ Break and Continue
 //         console.log("Here is an odd number: " + i);
 //     }
 // }
+
+
 
 
 
