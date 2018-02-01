@@ -32,6 +32,6 @@
 
 
     var unListPlanets = planetsArray.join("</li> <li>")
-    console.log("<ul> <li>" + unListPlanets + " </li> </ul>");
+    document.write("<ul> <li>" + unListPlanets + " </li> </ul>");
 
 })();
