@@ -37,31 +37,31 @@ Extra Challenge: allow the parser to accept letters and convert them to the corr
 //     }
 // }
 
-function numberChanger(number) {
-    var numberString = String(number);
-    var numberArray = numberString.split('');
-    var outputString = "";
-    if (numberArray.length === 10) {
-        console.log("It's ten")
-        outputString += numberArray.splice(2, 1, "-");
-        return outputString
-
-    } else if (numberArray.length === 11) {
-        console.log("It's eleven")
-
-
-    } else if (numberArray.length === 7) {
-        console.log("It's seven")
-
-
-    } else {
-        console.log("Is this a phone number? ")
+function parser(string) {
+    var phoneArray = [];
+    if (typeof(parseInt(string)) === 'number' && isFinite(string)){
+        string = string.toString();
+        if (string.length === 7){
+            phoneArray = string.split("");
+            phoneArray.splice(3, 0, "-");
+            phoneArray = phoneArray.join("");
+        } else if (string.length === 10){
+            phoneArray = string.split("");
+            phoneArray.splice(3, 0, "-");
+            phoneArray.splice(7, 0, "-");
+            phoneArray = phoneArray.join("");
+        } else if (string.length === 11){
+            phoneArray = string.split("");
+            phoneArray.splice(1, 0, "-");
+            phoneArray.splice(5, 0, "-");
+            phoneArray.splice(9, 0, "-");
+            phoneArray = phoneArray.join("");
+        } else {
+            return false;
+        }
+        return phoneArray;
     }
 }
-console.log(numberChanger("5552324343"));
-console.log(numberChanger("5553434"));
-console.log(numberChanger(18005552323));
-console.log(numberChanger("I'm your butterfly"));
 
 
 

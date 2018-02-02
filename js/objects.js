@@ -66,23 +66,30 @@
         {name: 'George', amount: 320}
     ];
 
-        function checkForDiscount(buyer) {
-            var i;
-            for (i = 0; i < buyer.length; i++) {
-                if (buyer[i].amount > 200) {
-                    console.log(buyer[i].name + " got a 12% discount, your total is " + discount(buyer[i].amount));
-                } else {
-                    console.log(buyer[i].name + "\'s total is " + buyer[i].amount);
-                }
-            }
+        // function checkForDiscount(buyer) {
+        //     var i;
+        //     for (i = 0; i < buyer.length; i++) {
+        //         if (buyer[i].amount > 200) {
+        //             console.log(buyer[i].name + " got a 12% discount, your total is " + discount(buyer[i].amount, 0.12));
+        //         } else {
+        //             console.log(buyer[i].name + "\'s total is " + buyer[i].amount);
+        //         }
+        //     }
+        // }
+        //
+        // console.log(checkForDiscount(shoppers));
+        //
+        // function discount(input, value) {
+        //     return input - (input * value);
+        // }
+
+
+        shoppers.forEach(function(shopper) {
+        if (shopper.amount > 200) {
+            shopper.amount = shopper.amount - (shopper.amount * .12);
         }
-
-        checkForDiscount(shoppers);
-
-        function discount(input) {
-            return input - (input * 0.12);
-        }
-
+            console.log(shopper.name + " spend " + shopper.amount);
+         });
 
 
 
@@ -168,16 +175,24 @@
      *      ...
      */
 
-    function booksInstock(book) {
-        var i;
-        for (i = 0; i < book.length; i++)
-            console.log("Book # " + i + "\n" + "Title: " + book[i].title + "\n" + "Author: " + book[i].author.firstName + " " + book[i].author.lastName + "\n" + "---") ;
-    }
+    //
+    // function booksInstock(book) {
+    //     var i;
+    //     for (i = 0; i < book.length; i++)
+    //         console.log("Book # " + i + "\n" + "Title: " + book[i].title + "\n" + "Author: " + book[i].author.firstName + " " + book[i].author.lastName + "\n" + "---") ;
+    // }
+    //
+    // booksInstock(books);
 
-    booksInstock(books);
 
-
-
+    books.forEach(function(book, index) {
+        var output = "";
+        output += "Book #" + (index + 1) + "\n";
+        output += "Title: " + book.title + "\n";
+        output += "Author: " + book.author.firstName + " " + book.author.lastName + "\n";
+        output += "---\n";
+        console.log(output);
+    });
 
     /**
      * Bonus:
@@ -189,5 +204,7 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+
 
 })();
