@@ -16,6 +16,10 @@
     <li data-dbid="5">Item 5</li>
 </ul>
 <h2 id="sub-header">Hello Again.</h2>
+<button id="btn1">Cool</button>
+<button id="btn2">SubBlue</button>
+<button id="btn3">Coral</button>
+<button id="btn4">JustTheONe</button>
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -33,13 +37,22 @@
         var mainHeader = document.getElementById('main-header');
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+
+        var buttonOne = function (event) {
         mainHeader.innerHTML = "Javascript is Cool";
+        }
+        document.getElementById('btn1').addEventListener('click', buttonOne, false);
+
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById('sub-header');
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
+
+        var buttonTwo = function (event) {
+            subHeader.style.color = "blue";
+        }
+        document.getElementById('btn2').addEventListener('click', buttonTwo, false);
 
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName('li');
@@ -47,9 +60,13 @@
 
         // TODO: Set text color on every other list item to grey
 
-        for (var i = 0; i < listItems.length; i += 2) {
-            listItems[i].style.color = "coral";
+        var buttonThree = function (event) {
+            for (var i = 0; i < listItems.length; i += 2) {
+                listItems[i].style.color = "coral";
+            }
         }
+        document.getElementById("btn3").addEventListener('click', buttonThree, false);
+
 
         // for (var i =0; i < listItems.length; i += 1) {
         //     if (i % 2 === 0) {
@@ -58,12 +75,15 @@
         // }
         // TODO: Set text color of li with dbid = 1 to blue
 
-
-        for (var i = 0; i < listItems.length; i += 1) {
-            if (listItems[i].getAttribute("data-dbid") === '1') {
-                listItems[i].style.color = "blue";
+        var buttonFour = function (event) {
+            for (var i = 0; i < listItems.length; i += 1) {
+                if (listItems[i].getAttribute("data-dbid") === '1') {
+                    listItems[i].style.color = "blue";
+                }
             }
         }
+
+        document.getElementById("btn4").addEventListener('click', buttonFour, false);
 
         // listItems[0].style.color = "blue";
 
