@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM BONUS</title>
+</head>
+<body>
+
+<!--
+DOM BONUS
+Create a list maker that confirms with the user if they wish to add an entry to a list.
+If the user confirms, after each new entry, prompt the user for additional
+items and then add them to the HTML of the page. If the user confirms not to add another
+item, end the cycle of user dialogue functions and apply styling to the page using JS only.
+-->
+
+<h1>What would you like to add?</h1>
+
+<h3>Favorite Foods</h3>
+<ul>
+    <li>Pizza</li>
+    <li>Tacos</li>
+    <li>Popcorn</li>
+    <li>Chips</li>
+</ul>
+
+<button id="btn1">Add to list</button>
+
+
+<script>
+    'use strict';
+
+    var newFood = "";
+
+    var listener = function (event) {
+        newFood = prompt('what would you like to add?');
+        addElement();
+    }
+    document.getElementById('btn1').addEventListener('click', listener, false);
+
+    function addElement () {
+        var newLi = document.createElement("li");
+        var newContent = document.createTextNode(newFood);
+        newLi.appendChild(newContent);
+        var currentLi = document.getElementById("li");
+        document.body.insertBefore(newLi, currentLi);
+    }
+
+
+</script>
+</body>
+</html>
