@@ -6,7 +6,7 @@
 <body>
 
 <h1>Example Page</h1>
-<div class="important">
+<div class="important codeup">
     <h3>NOTICE</h3>
     <p>This is an important message!</p>
         <ul>
@@ -22,7 +22,7 @@
         Lorem ipsum dolor sit amet, incididunt ut <span class="important">labore et dolore magna aliqua.</span>, quis ut aliquip ex ea commodo.
     </p>
 </div>
-<p class="important">This is also very important.</p>
+<p class="important codeup">This is also very important.</p>
 
 <!--<script-->
         <!--src="https://code.jquery.com/jquery-2.2.4.js"-->
@@ -34,16 +34,10 @@
     $(document).ready(function() {
 
     "use strict";
-    $('li').css('background-color', 'coral');
-    $('.important').css('color', 'red');
-    $('.not-important').css('background-color', 'lightblue')
-    var important =$('.important').html();
-    alert(important);
-
-
-
-
-
+    $('li').css('font-size', '20px');
+    $('h1, p, li').css('color', 'coral');
+    var textAlert = $('h1').text();
+    alert(textAlert);
     });
 </script>
 
