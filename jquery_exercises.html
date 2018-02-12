@@ -5,6 +5,19 @@
 </head>
 <body>
 
+<main class="container">
+    <h1>Login!</h1>
+    <form action="" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username">
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password">
+        <div class="output"></div>
+        <button id="login" type="submit">Login</button>
+    </form>
+</main>
+
 <h1>Example Page</h1>
 <div class="important codeup">
     <h3>NOTICE</h3>
@@ -33,11 +46,23 @@
 <script>
     $(document).ready(function() {
 
-    "use strict";
-    $('li').css('font-size', '20px');
-    $('h1, p, li').css('color', 'coral');
-    var textAlert = $('h1').text();
-    alert(textAlert);
+    $('h1').click(function() {
+        $(this).css('color', '#FF0');
+    });
+
+    $('p').dblclick(function() {
+        $(this).css('font-size', '20px');
+    });
+
+    $('li').hover(
+        function() {
+            $(this).css('color', 'red');
+        },
+        function() {
+            $(this).css('color', '#000');
+        }
+    );
+
     });
 </script>
 
