@@ -9,6 +9,12 @@
 <div class="important">
     <h3>NOTICE</h3>
     <p>This is an important message!</p>
+        <ul>
+            <li>Puppies</li>
+            <li>Kitties</li>
+            <li>Turtles</li>
+            <li>Moose</li>
+        </ul>
 </div>
 <div class="not-important">
     <h2>Lorem Ipsum</h2>
@@ -18,18 +24,23 @@
 </div>
 <p class="important">This is also very important.</p>
 
-<script
-        src="https://code.jquery.com/jquery-2.2.4.js"
-        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-        crossorigin="anonymous"></script>
+<!--<script-->
+        <!--src="https://code.jquery.com/jquery-2.2.4.js"-->
+        <!--integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="-->
+        <!--crossorigin="anonymous"></script>-->
 <script type="text/javascript" src="js/jquery-2.2.4.js"></script>
 
 <script>
     $(document).ready(function() {
 
     "use strict";
+    $('li').css('background-color', 'coral');
+    $('.important').css('color', 'red');
+    $('.not-important').css('background-color', 'lightblue')
+    var important =$('.important').html();
+    alert(important);
 
-    alert("Hey the DOM is done loading if you're seeing this.")
+
 
 
 
