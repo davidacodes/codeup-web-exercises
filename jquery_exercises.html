@@ -2,6 +2,17 @@
 <html>
 <head>
     <title>Curriculum Code Sample</title>
+    <style>
+        * {
+            text-align: center;
+            list-style: none;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+    </style>
 </head>
 <body>
 
@@ -62,6 +73,11 @@
             $(this).css('color', '#000');
         }
     );
+
+    $("p").click(function(event) {
+        $(event.target).toggleClass("highlight");
+    });
+
 
     });
 </script>
