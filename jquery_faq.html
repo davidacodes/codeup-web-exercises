@@ -24,11 +24,10 @@
             display: block;
         }
 
-        .register {
-            display: none;
-        }
+
 
     </style>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
 
@@ -37,11 +36,12 @@
 
 
 
-<div>
-    <h1>Would you like to sign up for a newsletter. </h1>
+<div class="alert alert-info" role="alert">
+    <h1>Would you like to sign up for a newsletter? </h1>
     <span class="exit">X</span>
 </div>
-<div class="register">
+
+<div class="register alert alert-success" >
     <h2>Would you like to register for the site?</h2>
     <span class="exit">X</span>
 </div>
@@ -128,6 +128,7 @@
 <button id="li2">Another way to make the last li in each ul have a yellow background</button>
 
 <script type="text/javascript" src="js/jquery-2.2.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script>
 
     /**
@@ -172,13 +173,12 @@
     });
 
     $("h3").click(function() {
-        $(this).next().children().slideToggle();
+        $(this).next().slideToggle();
     });
 
 
-    $(document).ready(function() {
-        $(".register").delay(8000).fadein();
-    )}
+    $(".register").hide().delay(2000).fadeIn();
+
 
 
 
