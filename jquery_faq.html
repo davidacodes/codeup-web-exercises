@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BUT DEM PARKS DOE</title>
+
+    <style>
+        .invisible {
+            display: none;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        dt {
+            text-decoration: underline;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 900;
+            display: block;
+        }
+
+        .register {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Theodore Roosevelt National Park</h1>
+
+
+
+
+<div>
+    <h1>Would you like to sign up for a newsletter. </h1>
+    <span class="exit">X</span>
+</div>
+<div class="register">
+    <h2>Would you like to register for the site?</h2>
+    <span class="exit">X</span>
+</div>
+
+<dl>
+    <dt>When and why was Theodore Roosevelt National Park established?</dt>
+    <dd class="invisible">Theodore Roosevelt National Memorial Park was established in 1947 in honor of Theodore Roosevelt. Roosevelt's experiences in the badlands were influential in his conservation efforts as President of the United States later in life. The park's designation was changed to Theodore Roosevelt National Park in 1978. More on Park History.</dd>
+
+    <dt>How big is Theodore Roosevelt National Park?</dt>
+    <dd class="invisible">The park's total acreage is 70,466.89 acres. See detailed information on Park Acreage.</dd>
+
+
+
+
+    <dt>Where is Theodore Roosevelt National Park and how do I get there?</dt>
+    <dd class="invisible">The park consists of three units in western North Dakota. See Directions.</dd>
+
+    <dt>When is the park open? Does the park ever close?</dt>
+    <dd class="invisible">The park is open 24 hours a day, year-round. See Operating Hours & Seasons for more information.</dd>
+
+    <dt>How much does it cost to visit Theodore Roosevelt National Park?</dt>
+    <dd class="invisible">See Fees and Reservations for details.</dd>
+
+    <dt>Where can I drive in the park? Do the roads ever close?</dt>
+    <dd class="invisible">The South Unit and North Unit have scenic drives. See the park map. Park roads may close as winter conditions warrant. Check current status of park roads.</dd>
+
+    <dt>How long does it take to drive the park road?</dt>
+    <dd class="invisible">The South Unit's 36-mile Scenic Loop Drive takes a minimum of 90 minutes to complete in a standard automobile. The North Unit's scenic road takes a minimum of 60 minutes to complete to Oxbow Overlook and back.</dd>
+
+    <dt>Are pets allowed?</dt>
+    <dd class="invisible">Yes, with restrictions. Be aware that pets, especially dogs, can upset park wildlife and create a dangerous situation. See Pets for specific information.</dd>
+
+    <dt>What is the weather and climate like?</dt>
+    <dd class="invisible">North Dakota experiences warm summers with highs in the 80s and 90s, and cold winters with lows often dipping well below zero. See Weather for climate and links to current weather conditions. Also check the park Webcam for a current image of the park.</dd>
+
+    <dt>Can I bring my firearm to Theodore Roosevelt National Park?</dt>
+    <dd class="invisible">Refer to Firearms and Other Weapons for information regarding firearms in the park.</dd>
+
+
+    <dt>Where can I hike?</dt>
+    <dd class="invisible">There are nearly 100 miles of trails in Theodore Roosevelt National Park. Hiking trails are shown on the Park Map. See Hiking for more information. There are also a number of short, self-guided nature walks in the park.</dd>
+
+    <dt>Can I camp in the backcountry?</dt>
+    <dd class="invisible">Yes. See Backcountry Camping</dd>
+
+    <dt>Can I canoe or kayak the Little Missouri River through the park?</dt>
+    <dd class="invisible">Yes. The Little Missouri River is typically quite shallow, and May and June are the best months to run the river. See Canoeing and Kayaking for detailed information.</dd>
+
+    <dt>Where can I ride my bicycle?</dt>
+    <dd class="invisible">Park roads are open to bicycles. Off-road bicycling, including on hiking trails, is prohibited. See Bicycling.</dd>
+
+    <dt>Can I bring my horse to the park?</dt>
+    <dd class="invisible">Yes, the park is open for private horse use.</dd>
+</dl>
+
+
+
+<h3 id="national-parks-heading">National Parks</h3>
+<ul id="national-parks">
+    <li>Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+    <li>Everglades</li>
+</ul>
+<h3>State Parks of Texas</h3>
+<ul id="state-parks-texas">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+</ul>
+<h3>State Parks of Texas</h3>
+<ul id="state-parks-texas">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+</ul>
+
+<button id="li1">Make the last li in each ul have a yellow background</button>
+<button id="li2">Another way to make the last li in each ul have a yellow background</button>
+
+<script type="text/javascript" src="js/jquery-2.2.4.js"></script>
+<script>
+
+    /**
+    Add a class to all dd elements named invisible.
+     Create CSS that sets elements with the invisible class to display: none.
+     Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.
+    **/
+
+
+
+    /**
+    Create a button that, when clicked, makes the last li in each ul have a yellow background.
+    When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+    When any list item is clicked, first li of the parent ul should have a font color of blue.
+    **/
+
+    $("#li1").click(function() {
+        $("ul").each(function(index, element) {
+            $(element).children().last().toggleClass('highlight');
+        });
+    });
+
+    $("#li2").click(function() {
+        $("ul").each(function(index, element) {
+            $(this).children().last().toggleClass('highlight');
+        });
+    });
+
+    //when any h3 is clicked.
+    //the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+    // $("h3").click(function() {
+    //     $(this).next().children().css('font-weight', "bold");
+    // });
+    //
+    // //When any list item is clicked, first li of the parent ul should have a font color of blue.
+    // $('li').click(function() {
+    //     $(this).parent().children().first().css('color', 'blue');
+    // });
+
+    $('.exit').click(function() {
+        $(this).parent().hide();
+    });
+
+    $("h3").click(function() {
+        $(this).next().children().slideToggle();
+    });
+
+
+    $(document).ready(function() {
+        $(".register").delay(8000).fadein();
+    )}
+
+
+
+</script>
+</body>
+</html>

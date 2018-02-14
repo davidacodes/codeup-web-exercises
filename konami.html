@@ -4,21 +4,35 @@
     <title>Konami Code</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+            background-color: #e75353;
+            color: #fff;
+        }
+        .fa  {
+            color: #fff;
+            font-size: 80px;
+        }
+        .key {
+            text-shadow: -7px 8px 2px #c54040, -3px 5px #c74b16;
+        }
+    </style>
 </head>
 <body>
 <h1>Konami Code</h1>
 
-<i class="fa fa-arrow-circle-up key0" style="font-size:60px;"></i>
-<i class="fa fa-arrow-circle-up key1" style="font-size:60px;"></i>
-<i class="fa fa-arrow-circle-down key2" style="font-size:60px;"></i>
-<i class="fa fa-arrow-circle-down key3" style="font-size:60px;"></i>
-<i class="fa fa-arrow-circle-left key4" style="font-size:60px;"></i>
-<i class="fa fa-arrow-circle-right key5" style="font-size:60px;"></i>
-<i class="fa fa-arrow-circle-left key6" style="font-size:60px;"></i>
-<i class="fa fa-arrow-circle-right key7" style="font-size:60px;"></i>
-<i class="fa fa-bold key8" style="font-size:60px;"></i>
-<i class="fa fa-font key9" style="font-size:60px;"></i>
-<i class="fa fa-share key10" style="font-size:60px;"></i>
+<i class="fa fa-arrow-circle-up key"></i>
+<i class="fa fa-arrow-circle-up key"></i>
+<i class="fa fa-arrow-circle-down key"></i>
+<i class="fa fa-arrow-circle-down key"></i>
+<i class="fa fa-arrow-circle-left key"></i>
+<i class="fa fa-arrow-circle-right key"></i>
+<i class="fa fa-arrow-circle-left key"></i>
+<i class="fa fa-arrow-circle-right key"></i>
+<i class="fa fa-bold key"></i>
+<i class="fa fa-font key"></i>
+<i class="fa fa-share key"></i>
 
 
 
@@ -31,19 +45,30 @@
     var code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
     var i = 0;
 
+    $(document).keydown(function(event) {
+        var pressedKey = event.keyCode;
+        if (code[i] === pressedKey)
+            var k = $(".fa").get([i]);
+            $(k).css('color', '#f4c95d');
+            $(k).removeClass("key");
+    })
+
+
     $(document).keyup(function(event){
         var pressedKey = event.keyCode;
         if (i === 10 && pressedKey === 13)
             alert("30 bonus lives");
         if (code[i] === pressedKey) {
             var k = $(".fa").get([i]);
-            $(k).css('color', 'red');
+            $(k).css('color', '#e7e393');
+            $(k).addClass("key");
             i++;
         } else {
             i = 0;
-            $('.fa').css('color', 'black');
+            $('.fa').css('color', '#fff');
         }
     });
+
 
 
 </script>
