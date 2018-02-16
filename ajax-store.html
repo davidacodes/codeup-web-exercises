@@ -1,10 +1,67 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Online Store</title>
 </head>
 <body>
-$END$
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Categories</th>
+    </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+
+<script type="text/javascript" src="js/jquery-2.2.4.js"></script>
+
+<script>
+    (function() {
+        "use strict";
+        // TODO: Create an ajax GET request for /data/inventory.json
+
+
+            var inventory = $.ajax("data/inventory.json").done(buildHTML);
+
+
+
+        // TODO: Take the data from inventory.json and append it to the products table
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
+
+
+        function buildHTML(inventory) {
+            console.log(inventory);
+            var html = "";
+
+        inventory.forEach(function(inventory) {
+            html += "<thead>";
+            html += "<tr>";
+            html += "<th>" + inventory.title + "<th>";
+            html += "<th>" + inventory.quantity + "<th>";
+            html += "<th>" + inventory.price + "<th>";
+            html += "<th>" + inventory.categories + "<th>";
+            html += "</tr>";
+            html += "</th>";
+
+            });
+
+            $('#insertProducts').html(html);
+
+        }
+
+        // buildHTML();
+
+    })();
+</script>
+
 </body>
 </html>
