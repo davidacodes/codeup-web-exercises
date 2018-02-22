@@ -18,12 +18,6 @@ wait(3000).then((data) => console.log(data));
 
 
 
-
-
-
-
-
-
 /**
  *
  * Create a function that accepts a github username, and returns a promise that
