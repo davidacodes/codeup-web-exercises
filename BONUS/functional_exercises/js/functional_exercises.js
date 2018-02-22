@@ -13,18 +13,39 @@
 //
 // Use an ajax GET request to read the contents of both .json files.
 
-let dataOne;
-let dataTwo;
-let dataAll = {};
-dataOne = $.ajax("./data/mock-data-batch-1.json").done(dataTwo);
-dataTwo = $.ajax("./data/mock-data-batch-2.json").done(combine);
+// let dataOne;
+// let dataTwo;
+// let dataAll = {};
+// dataOne = $.ajax("./data/mock-data-batch-1.json").done(dataTwo);
+// dataTwo = $.ajax("./data/mock-data-batch-2.json").done(combine);
+//
+// function combine() {
+//     dataAll = Object.assign(dataOne, dataTwo);
+//     return dataAll;
+// }
+//
+// console.log(dataAll);
 
-function combine() {
-    dataAll = Object.assign(dataOne, dataTwo);
-    return dataAll;
-}
 
-console.log(dataAll);
+ const weather = new Promise((resolve) => {
+     setTimeout(() => {
+         resolve({temp: 29, conditions: 'Sunny with Clouds'});
+     }, 9000);
+    });
+
+ const tweets = new Promise((resolve) => {
+     setTimeout(() => {
+         resolve(['I like cake', 'BBQ is good too']);
+     }, 500);
+ });
+
+ Promise
+     .all([weather, tweets])
+     .then(responses => {
+         console.log(responses);
+     })
+
+
 
 
 
